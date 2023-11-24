@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?><rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom"><channel><title>MyBlog</title><link>https://inquisitive-wisp-ecc9f8.netlify.app/post/</link><atom:link href="https://inquisitive-wisp-ecc9f8.netlify.app/post/index.xml" rel="self" type="application/rss+xml"/><description>MyBlog</description><generator>Hugo Blox Builder (https://hugoblox.com)</generator><language>en-us</language><image><url>https://inquisitive-wisp-ecc9f8.netlify.app/media/icon_hu0b7a4cb9992c9ac0e91bd28ffd38dd00_9727_512x512_fill_lanczos_center_3.png</url><title>MyBlog</title><link>https://inquisitive-wisp-ecc9f8.netlify.app/post/</link></image><item><title/><link>https://inquisitive-wisp-ecc9f8.netlify.app/post/blog-with-jupyter/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://inquisitive-wisp-ecc9f8.netlify.app/post/blog-with-jupyter/</guid><description/></item><item><title/><link>https://inquisitive-wisp-ecc9f8.netlify.app/post/getting-started/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://inquisitive-wisp-ecc9f8.netlify.app/post/getting-started/</guid><description/></item><item><title/><link>https://inquisitive-wisp-ecc9f8.netlify.app/post/writing-technical-content/</link><pubDate>Mon, 01 Jan 0001 00:00:00 +0000</pubDate><guid>https://inquisitive-wisp-ecc9f8.netlify.app/post/writing-technical-content/</guid><description>&lt;p>|Text| B(Round)
+B &amp;ndash;&amp;gt; C{Decision}
+C &amp;ndash;&amp;gt;|One| D[Result 1]
+C &amp;ndash;&amp;gt;|Two| E[Result 2]
+```&lt;/p>
+&lt;p>renders as&lt;/p>
+&lt;div class="mermaid">graph TD
+A[Hard] -->|Text| B(Round)
+B --> C{Decision}
+C -->|One| D[Result 1]
+C -->|Two| E[Result 2]
+&lt;/div>
+&lt;p>An example &lt;strong>sequence diagram&lt;/strong>:&lt;/p>
+&lt;pre>&lt;code>```mermaid
+sequenceDiagram
+Alice-&amp;gt;&amp;gt;John: Hello John, how are you?
+loop Healthcheck
+John-&amp;gt;&amp;gt;John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John--&amp;gt;&amp;gt;Alice: Great!
+John-&amp;gt;&amp;gt;Bob: How about you?
+Bob--&amp;gt;&amp;gt;John: Jolly good!
+```
+&lt;/code>&lt;/pre>
+&lt;p>renders as&lt;/p>
+&lt;div class="mermaid">sequenceDiagram
+Alice->>John: Hello John, how are you?
+loop Healthcheck
+John->>John: Fight against hypochondria
+end
+Note right of John: Rational thoughts!
+John-->>Alice: Great!
+John->>Bob: How about you?
+Bob-->>John: Jolly good!
+&lt;/div>
+&lt;p>An example &lt;strong>Gantt diagram&lt;/strong>:&lt;/p>
+&lt;pre>&lt;code>```mermaid
+gantt
+section Section
+Completed :done, des1, 2014-01-06,2014-01-08
+Active :active, des2, 2014-01-07, 3d
+Parallel 1 : des3, after des1, 1d
+Parallel 2 : des4, after des1, 1d
+Parallel 3 : des5, after des3, 1d
+Parallel 4 : des6, after des4, 1d
+```
+&lt;/code>&lt;/pre>
+&lt;p>renders as&lt;/p>
+&lt;div class="mermaid">gantt
+section Section
+Completed :done, des1, 2014-01-06,2014-01-08
+Active :active, des2, 2014-01-07, 3d
+Parallel 1 : des3, after des1, 1d
+Parallel 2 : des4, after des1, 1d
+Parallel 3 : des5, after des3, 1d
+Parallel 4 : des6, after des4, 1d
+&lt;/div>
+&lt;p>An example &lt;strong>class diagram&lt;/strong>:&lt;/p>
+&lt;pre>&lt;code>```mermaid
+classDiagram
+Class01 &amp;lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --&amp;gt; C2 : Where am i?
+Class09 --* C3
+Class09 --|&amp;gt; Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &amp;lt;--&amp;gt; C2: Cool label
+```
+&lt;/code>&lt;/pre>
+&lt;p>renders as&lt;/p>
+&lt;div class="mermaid">classDiagram
+Class01 &lt;|-- AveryLongClass : Cool
+Class03 *-- Class04
+Class05 o-- Class06
+Class07 .. Class08
+Class09 --> C2 : Where am i?
+Class09 --* C3
+Class09 --|> Class07
+Class07 : equals()
+Class07 : Object[] elementData
+Class01 : size()
+Class01 : int chimp
+Class01 : int gorilla
+Class08 &lt;--> C2: Cool label
+&lt;/div>
+&lt;p>An example &lt;strong>state diagram&lt;/strong>:&lt;/p>
+&lt;pre>&lt;code>```mermaid
+stateDiagram
+[*] --&amp;gt; Still
+Still --&amp;gt; [*]
+Still --&amp;gt; Moving
+Moving --&amp;gt; Still
+Moving --&amp;gt; Crash
+Crash --&amp;gt; [*]
+```
+&lt;/code>&lt;/pre>
+&lt;p>renders as&lt;/p>
+&lt;div class="mermaid">stateDiagram
+[*] --> Still
+Still --> [*]
+Still --> Moving
+Moving --> Still
+Moving --> Crash
+Crash --> [*]
+&lt;/div>
+&lt;h3 id="todo-lists">Todo lists&lt;/h3>
+&lt;p>You can even write your todo lists in Markdown too:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [x]&lt;/span> Write math example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl"> &lt;span class="k">- [x]&lt;/span> Write diagram example
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">&lt;span class="k">- [ ]&lt;/span> Do something else
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>renders as&lt;/p>
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Write math example
+&lt;ul>
+&lt;li>&lt;input checked="" disabled="" type="checkbox"> Write diagram example&lt;/li>
+&lt;/ul>
+&lt;/li>
+&lt;li>&lt;input disabled="" type="checkbox"> Do something else&lt;/li>
+&lt;/ul>
+&lt;h3 id="tables">Tables&lt;/h3>
+&lt;p>Save your spreadsheet as a CSV file in your page&amp;rsquo;s folder and then render it by adding the &lt;em>Table&lt;/em> shortcode to your page:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-go" data-lang="go">&lt;span class="line">&lt;span class="cl">&lt;span class="p">{{&amp;lt;&lt;/span> &lt;span class="nx">table&lt;/span> &lt;span class="nx">path&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s">&amp;#34;results.csv&amp;#34;&lt;/span> &lt;span class="nx">header&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s">&amp;#34;true&amp;#34;&lt;/span> &lt;span class="nx">caption&lt;/span>&lt;span class="p">=&lt;/span>&lt;span class="s">&amp;#34;Table 1: My results&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;}}&lt;/span>
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>renders as&lt;/p>
+&lt;table class="table">
+&lt;tr> &lt;th>customer_id&lt;/th> &lt;th>score&lt;/th> &lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;td data-table-dtype="number">0&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="number">2&lt;/td>
+&lt;td data-table-dtype="text">0.5&lt;/td>
+&lt;/tr>
+&lt;tr>
+&lt;td data-table-dtype="number">3&lt;/td>
+&lt;td data-table-dtype="number">1&lt;/td>
+&lt;/tr>
+&lt;caption>Table 1: My results&lt;/caption>
+&lt;/table>
+&lt;h3 id="callouts">Callouts&lt;/h3>
+&lt;p>Academic supports a &lt;a href="https://docs.hugoblox.com/content/writing-markdown-latex/#callouts" target="_blank" rel="noopener">shortcode for callouts&lt;/a>, also referred to as &lt;em>asides&lt;/em>, &lt;em>hints&lt;/em>, or &lt;em>alerts&lt;/em>. By wrapping a paragraph in &lt;code>{{% callout note %}} ... {{% /callout %}}&lt;/code>, it will render as an aside.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{% callout note %}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{% /callout %}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>renders as&lt;/p>
+&lt;div class="alert alert-note">
+&lt;div>
+A Markdown aside is useful for displaying notices, hints, or definitions to your readers.
+&lt;/div>
+&lt;/div>
+&lt;h3 id="spoilers">Spoilers&lt;/h3>
+&lt;p>Add a spoiler to a page to reveal text, such as an answer to a question, after a button is clicked.&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">spoiler&lt;/span> &lt;span class="na">text&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;Click to view the spoiler&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">You found me!
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="p">/&lt;/span>&lt;span class="nt">spoiler&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}}
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>renders as&lt;/p>
+&lt;details class="spoiler " id="spoiler-2">
+&lt;summary>Click to view the spoiler&lt;/summary>
+&lt;p>You found me!&lt;/p>
+&lt;/details>
+&lt;h3 id="icons">Icons&lt;/h3>
+&lt;p>Academic enables you to use a wide range of &lt;a href="https://docs.hugoblox.com/getting-started/page-builder/#icons" target="_blank" rel="noopener">icons from &lt;em>Font Awesome&lt;/em> and &lt;em>Academicons&lt;/em>&lt;/a> in addition to &lt;a href="https://docs.hugoblox.com/content/writing-markdown-latex/#emojis" target="_blank" rel="noopener">emojis&lt;/a>.&lt;/p>
+&lt;p>Here are some examples using the &lt;code>icon&lt;/code> shortcode to render icons:&lt;/p>
+&lt;div class="highlight">&lt;pre tabindex="0" class="chroma">&lt;code class="language-markdown" data-lang="markdown">&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">icon&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;terminal&amp;#34;&lt;/span> &lt;span class="na">pack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fas&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}} Terminal
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">icon&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;python&amp;#34;&lt;/span> &lt;span class="na">pack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fab&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}} Python
+&lt;/span>&lt;/span>&lt;span class="line">&lt;span class="cl">{{&lt;span class="p">&amp;lt;&lt;/span> &lt;span class="nt">icon&lt;/span> &lt;span class="na">name&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;r-project&amp;#34;&lt;/span> &lt;span class="na">pack&lt;/span>&lt;span class="o">=&lt;/span>&lt;span class="s">&amp;#34;fab&amp;#34;&lt;/span> &lt;span class="p">&amp;gt;&lt;/span>}} R
+&lt;/span>&lt;/span>&lt;/code>&lt;/pre>&lt;/div>&lt;p>renders as&lt;/p>
+&lt;p>
+&lt;i class="fas fa-terminal pr-1 fa-fw">&lt;/i> Terminal&lt;br>
+&lt;i class="fab fa-python pr-1 fa-fw">&lt;/i> Python&lt;br>
+&lt;i class="fab fa-r-project pr-1 fa-fw">&lt;/i> R&lt;/p>
+&lt;h3 id="did-you-find-this-page-helpful-consider-sharing-it----">Did you find this page helpful? Consider sharing it 🙌 &amp;ndash;&amp;gt;&lt;/h3></description></item></channel></rss>
